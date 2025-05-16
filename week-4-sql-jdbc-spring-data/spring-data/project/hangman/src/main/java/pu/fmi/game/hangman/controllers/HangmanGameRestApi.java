@@ -45,8 +45,8 @@ public class HangmanGameRestApi {
 
   // GET /hangman-games
   @GetMapping
-  public List<HangmanGame> fetchAllGames() {
-    return hangmanGameService.getAllGames();
+  public List<HangmanGame> fetchTop10Games() {
+    return hangmanGameService.getTop10ByStartedOnDateDesc();
   }
 
   // GET /hangman-games/status

@@ -43,7 +43,7 @@ public class HangmanGameRestApiTest {
         .isOk()
         .expectBody()
           .jsonPath("$.id").isEqualTo(createdGame.getId())
-          .jsonPath("$.status").isEqualTo(createdGame.getStatus())
+          .jsonPath("$.status").isEqualTo(createdGame.getStatus().name())
           .jsonPath("$.currentWrongGuess").isEqualTo(createdGame.getCurrentWrongGuess())
           .jsonPath("$.wrongGuesses").isEqualTo(createdGame.getWrongGuesses());
   }

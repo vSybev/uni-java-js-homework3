@@ -95,6 +95,10 @@ public class HangmanGameService implements GameService {
     return this.gameRepository.findAll();
   }
 
+  public List<HangmanGame> getTop10ByStartedOnDateDesc() {
+    return gameRepository.findTop10ByOrderByStartedOnDateDesc();
+  }
+
   @Override
   public List<HangmanGame> findAllByStatus(Status status){
     return gameRepository.findByStatus(status);
